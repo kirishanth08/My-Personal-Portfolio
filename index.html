@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirishanth | Software Developer & Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Kirishanth - Software Developer specializing in high-performance web applications, scalable backend architecture, and modern digital experiences.">
+  <meta name="keywords" content="Kirishanth, Software Developer, Full Stack Engineer, Web Developer, JavaScript, TypeScript, React, Node.js">
+  <meta name="author" content="Kirishanth">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kirishanth | Software Developer Portfolio">
+  <meta property="og:description" content="Explore projects, skills, and experience of Kirishanth - Software Developer.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Background Video & Dynamic Contrast Overlay -->
+  <div class="video-bg-container" aria-hidden="true">
+    <video id="bg-video" class="bg-video" muted playsinline preload="auto" disablepictureinpicture disableremoteplayback>
+      <source src="assets/videos/background.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- Background Interactive Canvas & Ambient Glows -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow-top"></div>
+  <div class="ambient-glow-bottom"></div>
+
+  <!-- Sticky Floating Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-logo" aria-label="Kirishanth Home">
+        <span class="logo-dot"></span>
+        <span>Kirishanth<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="nav-cta-btn">
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button id="mobile-toggle-btn" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section container">
+      <div class="hero-center-wrapper">
+        <!-- Centered Intro Shield with Crystal-Clear Video Visibility -->
+        <div class="hero-content hero-glass-plate">
+          <div class="status-pill animate-pulse-dot">
+            <span class="status-indicator"></span>
+            <span>Available for new opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text hero-name">Kirishanth</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span class="role-prefix">&gt;</span>
+            <span id="role-typing" class="role-typing">Software Developer</span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            Passionate Software Developer with a commitment to clean code, robust architecture, and smooth user interactions. Transforming complex requirements into fast, reliable, and aesthetically refined digital solutions.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-primary">
+              <span>View Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/kirishanth08" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kirishanth-g-s/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:kirishanth0706@gmail.com" class="social-icon-btn" aria-label="Direct Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-section container reveal-init">
+      <div class="stats-grid">
+        <div class="stat-card tilt-card">
+          <div class="stat-number">1+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-card tilt-card">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card tilt-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Tech Stacks Mastered</div>
+        </div>
+        <div class="stat-card tilt-card">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">Quality & Delivery Focus</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Principles Section -->
+    <section id="about" class="about-section container reveal-init">
+      <div class="section-header">
+        <span class="section-badge">ABOUT ME</span>
+        <h2 class="section-title">Driven by Quality & Innovation</h2>
+        <p class="section-subtitle">Dedicated to creating elegant software that delivers measurable real-world impact.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio-col">
+          <p class="about-bio-text">
+            Hello! I am <strong>Kirishanth</strong>, a Software Developer with experience designing and developing modern web applications, scalable backends, and responsive user interfaces. I love digging into tough technical challenges, optimizing performance, and crafting clean, maintainable code.
+          </p>
+          <p class="about-bio-text">
+            Whether building distributed services, integrating external APIs, or implementing fluid front-end animations, I treat every project with rigorous attention to detail and a passion for engineering excellence.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-row">
+              <span class="highlight-icon">✓</span>
+              <span>Strong grasp of modern software architecture & design patterns</span>
+            </div>
+            <div class="highlight-row">
+              <span class="highlight-icon">✓</span>
+              <span>Dedicated to rapid load times, accessibility, and clean code standards</span>
+            </div>
+            <div class="highlight-row">
+              <span class="highlight-icon">✓</span>
+              <span>Effective communicator and agile team collaborator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="principles-grid">
+          <div class="principle-card tilt-card">
+            <div class="principle-icon">⚡</div>
+            <h3 class="principle-title">Performance First</h3>
+            <p class="principle-desc">Optimizing every millisecond and byte for silky 60fps renders and instant responsiveness.</p>
+          </div>
+          <div class="principle-card tilt-card">
+            <div class="principle-icon">🛡️</div>
+            <h3 class="principle-title">Clean Architecture</h3>
+            <p class="principle-desc">Building decoupled, maintainable systems with clean abstractions and reliable testing.</p>
+          </div>
+          <div class="principle-card tilt-card">
+            <div class="principle-icon">🎨</div>
+            <h3 class="principle-title">Intuitive UI/UX</h3>
+            <p class="principle-desc">Crafting thoughtful user journeys with micro-interactions, accessibility, and high visual polish.</p>
+          </div>
+          <div class="principle-card tilt-card">
+            <div class="principle-icon">🚀</div>
+            <h3 class="principle-title">Continuous Growth</h3>
+            <p class="principle-desc">Embracing new web standards, modern tooling, and automated workflows to deliver peak value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills-section container reveal-init">
+      <div class="section-header">
+        <span class="section-badge">SKILLS & TECH STACK</span>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">A curated toolkit designed for building robust, end-to-end digital solutions.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend Card -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-category-header">
+            <span class="skill-cat-icon">🎨</span>
+            <h3 class="skill-cat-title">Frontend Development</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript (ES6+)</span><span class="skill-pct" data-target="92">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>TypeScript</span><span class="skill-pct" data-target="88">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>React.js / Next.js</span><span class="skill-pct" data-target="90">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML5 & CSS3 Glassmorphism</span><span class="skill-pct" data-target="95">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Card -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-category-header">
+            <span class="skill-cat-icon">⚙️</span>
+            <h3 class="skill-cat-title">Backend & APIs</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Node.js & Express</span><span class="skill-pct" data-target="92">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Python & FastAPI</span><span class="skill-pct" data-target="85">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>RESTful & GraphQL APIs</span><span class="skill-pct" data-target="90">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Authentication & Security (JWT)</span><span class="skill-pct" data-target="88">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database & Storage Card -->
+        <div class="skill-category-card tilt-card">
+          <div class="skill-category-header">
+            <span class="skill-cat-icon">🗄️</span>
+            <h3 class="skill-cat-title">Database & Storage</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>PostgreSQL</span><span class="skill-pct" data-target="90">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>MySQL</span><span class="skill-pct" data-target="88">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>MongoDB</span><span class="skill-pct" data-target="86">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="86%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Redis & In-Memory Caching</span><span class="skill-pct" data-target="84">0%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="84%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects-section container reveal-init">
+      <div class="section-header">
+        <span class="section-badge">FEATURED WORK</span>
+        <h2 class="section-title">Crafted With Precision</h2>
+        <p class="section-subtitle">Real-world applications showcasing scalable code, responsive UI, and system design.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; Portals</button>
+        <button class="filter-btn" data-filter="web">Web Applications</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: Asterra -->
+        <article class="project-card tilt-card" data-category="fullstack" data-id="asterra">
+          <div class="project-img-wrapper">
+            <img src="assets/images/asterra.jpg" alt="Asterra Notary & Document Attestation Portal Preview" class="project-img" loading="lazy">
+            <span class="project-category-badge">Full-Stack &amp; LegalTech</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Asterra Document Attestation</h3>
+            <p class="project-summary">Comprehensive document notarization and apostille platform with automated verification intake, multi-stage legal workflows, and administrative review dashboard.</p>
+            <div class="project-metrics">⚡ Multi-stage verification • Complete admin portal</div>
+            <div class="project-tags">
+              <span class="tag-badge">JavaScript (ES6)</span>
+              <span class="tag-badge">Admin Dashboard</span>
+              <span class="tag-badge">Attestation Workflows</span>
+              <span class="tag-badge">Dynamic Forms</span>
+              <span class="tag-badge">Responsive UI</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-actions">
+                <a href="https://asterra-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-icon-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+              <button class="btn-details-trigger" aria-label="View Asterra Details">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: VetCare Pro -->
+        <article class="project-card tilt-card" data-category="fullstack" data-id="vetcare">
+          <div class="project-img-wrapper">
+            <img src="assets/images/vetcare.jpg" alt="VetCare Pro Hospital Platform Preview" class="project-img" loading="lazy">
+            <span class="project-category-badge">Healthcare &amp; Full-Stack</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">VetCare Pro Hospital Platform</h3>
+            <p class="project-summary">Compassionate veterinary hospital platform featuring online pet appointment scheduling, medical history tracking, billing records, and dual RTL/LTR internationalization.</p>
+            <div class="project-metrics">⚡ 100% form validation • Dual RTL/LTR localization</div>
+            <div class="project-tags">
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Appointment System</span>
+              <span class="tag-badge">Patient Portal</span>
+              <span class="tag-badge">RTL/LTR Support</span>
+              <span class="tag-badge">CSS Glassmorphism</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-actions">
+                <a href="https://pet-hospital-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-icon-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+              <button class="btn-details-trigger" aria-label="View VetCare Pro Details">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: SonicDrop -->
+        <article class="project-card tilt-card" data-category="web" data-id="sonicdrop">
+          <div class="project-img-wrapper">
+            <img src="assets/images/sonicdrop.jpg" alt="SonicDrop Live Audio & DJ Service Preview" class="project-img" loading="lazy">
+            <span class="project-category-badge">Interactive &amp; Media UI</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">SonicDrop Audio &amp; DJ Service</h3>
+            <p class="project-summary">High-energy live event audio and DJ production portal featuring sound package builders, booking fee calculators, and celebration FX showcase.</p>
+            <div class="project-metrics">⚡ Interactive package builder • Rich multimedia UI</div>
+            <div class="project-tags">
+              <span class="tag-badge">JavaScript (ES6)</span>
+              <span class="tag-badge">Audio Production UI</span>
+              <span class="tag-badge">Booking Flow</span>
+              <span class="tag-badge">Interactive Showcase</span>
+              <span class="tag-badge">Modern CSS</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-actions">
+                <a href="https://dj-rental-xi.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-icon-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+              <button class="btn-details-trigger" aria-label="View SonicDrop Details">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: AuraVisa -->
+        <article class="project-card tilt-card" data-category="fullstack" data-id="auravisa">
+          <div class="project-img-wrapper">
+            <img src="assets/images/auravisa.jpg" alt="AuraVisa Global Immigration & Visa Portal Preview" class="project-img" loading="lazy">
+            <span class="project-category-badge">Full-Stack &amp; LegalTech</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AuraVisa Global Immigration Portal</h3>
+            <p class="project-summary">Global visa consultancy and immigration lifecycle portal featuring interactive visa eligibility assessments, multi-country destination roadmaps, client case tracking, and consultation booking.</p>
+            <div class="project-metrics">⚡ Multi-category visa intake • Real-time status tracking</div>
+            <div class="project-tags">
+              <span class="tag-badge">JavaScript (ES6)</span>
+              <span class="tag-badge">Immigration Tech</span>
+              <span class="tag-badge">Eligibility Calculator</span>
+              <span class="tag-badge">Interactive UI</span>
+              <span class="tag-badge">Dynamic Workflows</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-actions">
+                <a href="https://aura-visa.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-icon-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+              <button class="btn-details-trigger" aria-label="View AuraVisa Details">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: LexVanguard -->
+        <article class="project-card tilt-card" data-category="fullstack" data-id="lexvanguard">
+          <div class="project-img-wrapper">
+            <img src="assets/images/lexvanguard.jpg" alt="LexVanguard IP & Patent Consultancy Preview" class="project-img" loading="lazy">
+            <span class="project-category-badge">LegalTech &amp; IP Systems</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">LexVanguard IP &amp; Patents</h3>
+            <p class="project-summary">Enterprise intellectual property consultancy portal facilitating trademark registrations, patent search, copyright defense, and consultative legal advisory.</p>
+            <div class="project-metrics">⚡ Comprehensive IP workflows • Enterprise UX</div>
+            <div class="project-tags">
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">LegalTech</span>
+              <span class="tag-badge">Document Intake</span>
+              <span class="tag-badge">Interactive Forms</span>
+              <span class="tag-badge">Enterprise CSS</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-actions">
+                <a href="https://lex-vanguard.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-icon-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+              <button class="btn-details-trigger" aria-label="View LexVanguard Details">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: KAI Martial Arts -->
+        <article class="project-card tilt-card" data-category="web" data-id="kaimartialarts">
+          <div class="project-img-wrapper">
+            <img src="assets/images/kaimartialarts.jpg" alt="KAI Martial Arts Academy Preview" class="project-img" loading="lazy">
+            <span class="project-category-badge">Sports &amp; Fitness UI</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">KAI Martial Arts Academy</h3>
+            <p class="project-summary">Martial arts academy portal with interactive weekly class schedules, belt progression tracking, trial class booking, and multi-discipline curriculum showcase.</p>
+            <div class="project-metrics">⚡ Instant trial booking • Dynamic schedule engine</div>
+            <div class="project-tags">
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Interactive Timetable</span>
+              <span class="tag-badge">Class Booking</span>
+              <span class="tag-badge">Mobile First</span>
+              <span class="tag-badge">CSS Grid</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-actions">
+                <a href="https://kai-three-swart.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-icon-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+              <button class="btn-details-trigger" aria-label="View KAI Martial Arts Details">Details</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Work Experience & Timeline Section -->
+    <section id="experience" class="experience-section container reveal-init">
+      <div class="section-header">
+        <span class="section-badge">CAREER JOURNEY</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">A chronological track record of shipping impactful software solutions.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-rail"></div>
+
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period-badge">Nov 2025 - Present</span>
+            <h3 class="timeline-role">Software Developer</h3>
+            <div class="timeline-company">Full-Stack Web &amp; Client Solutions • Remote / Hybrid</div>
+            <p class="timeline-desc">Developing robust full-stack web applications, database architecture, and high-performance customer portals.</p>
+            <ul class="timeline-highlights">
+              <li class="timeline-highlight-item">
+                <span class="highlight-bullet">▹</span>
+                <span>Architected scalable RESTful APIs and optimized database schemas across PostgreSQL and MySQL.</span>
+              </li>
+              <li class="timeline-highlight-item">
+                <span class="highlight-bullet">▹</span>
+                <span>Built responsive client portals, service booking workflows, and dynamic administrative dashboards.</span>
+              </li>
+              <li class="timeline-highlight-item">
+                <span class="highlight-bullet">▹</span>
+                <span>Engineered accessible, cross-browser interfaces with clean modern CSS, glassmorphism, and dual RTL/LTR internationalization.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period-badge">Jun 2025 - Oct 2025</span>
+            <h3 class="timeline-role">Junior Web Developer</h3>
+            <div class="timeline-company">Digital Solutions &amp; Web Systems • Remote</div>
+            <p class="timeline-desc">Focused on frontend UI development, component architecture, API integrations, and code optimization.</p>
+            <ul class="timeline-highlights">
+              <li class="timeline-highlight-item">
+                <span class="highlight-bullet">▹</span>
+                <span>Developed modular, reusable UI components using Vanilla JavaScript (ES6+) and modern HTML5/CSS3.</span>
+              </li>
+              <li class="timeline-highlight-item">
+                <span class="highlight-bullet">▹</span>
+                <span>Integrated client-side state handling and form validation routines ensuring zero-error submissions.</span>
+              </li>
+              <li class="timeline-highlight-item">
+                <span class="highlight-bullet">▹</span>
+                <span>Collaborated on responsive design testing and performance tuning, improving Core Web Vitals scores.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="contact-section container reveal-init">
+      <div class="section-header">
+        <span class="section-badge">TRANSMISSION HUB</span>
+        <h2 class="section-title">Let's Build Something Extraordinary</h2>
+        <p class="section-subtitle">Have a vision, a project, or a technical challenge? Send a transmission or connect directly.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Interactive Transmission Hub (Left Card) -->
+        <div class="contact-card contact-info-panel tilt-card">
+          <div class="panel-glow-accent"></div>
+          
+          <div class="panel-header">
+            <div class="beacon-wrapper">
+              <span class="beacon-dot"></span>
+              <span class="beacon-ring"></span>
+            </div>
+            <span class="panel-channel-title">LIVE TRANSMISSION CHANNEL</span>
+            <span class="panel-badge-fast">⚡ &lt; 2h Reply</span>
+          </div>
+
+          <div class="info-widgets-stack">
+            <!-- Widget 1: Direct Email Portal -->
+            <div class="info-widget-card" id="email-widget">
+              <div class="widget-icon-box mail-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="widget-details">
+                <span class="widget-label">DIRECT EMAIL INTAKE</span>
+                <a href="mailto:kirishanth0706@gmail.com" class="widget-val email-link">kirishanth0706@gmail.com</a>
+                <div class="widget-action-row">
+                  <button id="copy-email-btn" class="action-chip copy-chip" data-email="kirishanth0706@gmail.com" aria-label="Copy Email to Clipboard">
+                    <svg class="chip-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span class="copy-text">Copy Address</span>
+                  </button>
+                  <a href="mailto:kirishanth0706@gmail.com" class="action-chip compose-chip">
+                    <span>Compose</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Widget 2: Global Radar & Time -->
+            <div class="info-widget-card" id="location-widget">
+              <div class="widget-icon-box radar-icon-box">
+                <span class="radar-sweep"></span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <div class="widget-details">
+                <span class="widget-label">LOCATION &amp; AVAILABILITY</span>
+                <div class="widget-val">Remote / Worldwide</div>
+                <div class="live-clock-pill">
+                  <span class="clock-indicator"></span>
+                  <span class="clock-label">Local Time:</span>
+                  <span id="live-time" class="clock-time">Loading...</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Widget 3: Social Radar Links -->
+            <div class="info-widget-card" id="social-widget">
+              <div class="widget-icon-box social-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div class="widget-details">
+                <span class="widget-label">PROFESSIONAL NETWORKS</span>
+                <div class="social-interactive-dock">
+                  <a href="https://github.com/kirishanth08" target="_blank" rel="noopener noreferrer" class="social-dock-btn github-dock" aria-label="GitHub Profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span class="dock-label">GitHub</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/kirishanth-g-s/" target="_blank" rel="noopener noreferrer" class="social-dock-btn linkedin-dock" aria-label="LinkedIn Profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span class="dock-label">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini Terminal Feed -->
+            <div class="contact-terminal-feed">
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">kirishanth.status</span> <span class="t-comment"># active</span></div>
+              <div class="terminal-response">
+                <span class="t-key">openForOpportunities:</span> <span class="t-bool">true</span>, 
+                <span class="t-key">preferredMode:</span> <span class="t-str">"Full-Stack / Remote"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Project Inquiry Terminal (Right Card) -->
+        <div class="contact-card contact-form-panel tilt-card">
+          <div class="panel-glow-accent form-glow"></div>
+
+          <div class="form-panel-header">
+            <h3 class="form-panel-title">Send a Transmission</h3>
+            <p class="form-panel-desc">Select an inquiry intent or describe your project requirements.</p>
+          </div>
+
+          <!-- Interactive Intent Quick-Chips -->
+          <div class="intent-chips-group">
+            <span class="intent-group-label">PROJECT INTENT:</span>
+            <div class="intent-chips-container" role="radiogroup" aria-label="Select Inquiry Intent">
+              <button type="button" class="intent-chip active" data-subject="Full-Stack Web Application" data-placeholder="Tell me about your application concept, expected user flows, and timeline...">
+                <span class="chip-emoji">🚀</span>
+                <span>Full-Stack App</span>
+              </button>
+              <button type="button" class="intent-chip" data-subject="Freelance / Client Project" data-placeholder="Describe the scope, deliverables, and targets for your project...">
+                <span class="chip-emoji">💼</span>
+                <span>Client Project</span>
+              </button>
+              <button type="button" class="intent-chip" data-subject="Database &amp; API Architecture" data-placeholder="Let me know about your database, performance bottlenecks, or backend needs...">
+                <span class="chip-emoji">⚡</span>
+                <span>Backend &amp; API</span>
+              </button>
+              <button type="button" class="intent-chip" data-subject="Quick Hello &amp; Connect" data-placeholder="Hey Kirishanth, wanted to connect and discuss...">
+                <span class="chip-emoji">👋</span>
+                <span>Say Hello</span>
+              </button>
+            </div>
+          </div>
+
+          <form id="portfolio-contact-form" class="cyber-form" action="https://formsubmit.co/kirishanth0706@gmail.com" method="POST" target="formsubmit_silent_frame">
+            <!-- FormSubmit direct forward configuration -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" id="form-subject-hidden" name="_subject" value="New Portfolio Message for Kirishanth">
+            <div class="cyber-form-row">
+              <div class="cyber-input-wrapper">
+                <div class="input-icon-adornment">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <input type="text" id="contact-name" name="name" class="cyber-input" placeholder=" " required>
+                <label for="contact-name" class="cyber-floating-label">Your Name</label>
+                <div class="input-glow-line"></div>
+              </div>
+
+              <div class="cyber-input-wrapper">
+                <div class="input-icon-adornment">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <input type="email" id="contact-email" name="email" class="cyber-input" placeholder=" " required>
+                <label for="contact-email" class="cyber-floating-label">Your Email</label>
+                <div class="input-glow-line"></div>
+              </div>
+            </div>
+
+            <div class="cyber-input-wrapper">
+              <div class="input-icon-adornment">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <input type="text" id="contact-subject" name="subject" class="cyber-input" value="Full-Stack Web Application" placeholder=" " required>
+              <label for="contact-subject" class="cyber-floating-label">Transmission Subject</label>
+              <div class="input-glow-line"></div>
+            </div>
+
+            <div class="cyber-textarea-block">
+              <div class="textarea-header-row">
+                <label for="contact-message" class="textarea-field-label">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <span>Your Message</span>
+                </label>
+                <span id="char-counter" class="char-count">0 / 500</span>
+              </div>
+              <div class="textarea-box-wrapper">
+                <textarea id="contact-message" name="message" class="cyber-textarea" placeholder="Tell me about your application concept, expected user flows, and timeline..." required></textarea>
+                <div class="input-glow-line"></div>
+              </div>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="cyber-submit-btn">
+              <span class="btn-bg-shimmer"></span>
+              <span class="btn-content">
+                <span class="btn-text">Transmit Message</span>
+                <svg class="send-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </span>
+            </button>
+          </form>
+
+          <!-- Hidden silent submission frame so message transmits directly to kirishanth0706@gmail.com without opening Outlook or leaving page -->
+          <iframe name="formsubmit_silent_frame" id="formsubmit_silent_frame" style="display:none; width:0; height:0; border:0;" tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Project Details Modal Dialog -->
+  <dialog id="project-modal" class="project-modal">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">✕</button>
+      <img id="modal-img" src="" alt="Project Preview Screenshot" class="modal-header-img">
+      <div class="modal-body">
+        <span id="modal-cat" class="project-category-badge" style="position: static; display: inline-block; margin-bottom: 0.75rem;">Category</span>
+        <h3 id="modal-title" class="project-title" style="font-size: 1.75rem;">Project Title</h3>
+        <div id="modal-metrics" class="project-metrics" style="margin-bottom: 1.25rem;">Metrics</div>
+        <p id="modal-desc" class="project-summary" style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">Detailed description...</p>
+        <div id="modal-tags" class="project-tags"></div>
+        <div style="display: flex; gap: 1rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+          <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
+            <span>Visit Live Demo</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        © 2026 Kirishanth. All rights reserved.
+      </div>
+      <div class="footer-tag">
+        ⚡ Designed &amp; Engineered with Modern Web Standards
+      </div>
+      <a href="#hero" class="back-to-top">
+        <span>Back to Top</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts: Clean & Beginner Friendly -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/background.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
